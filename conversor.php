@@ -92,9 +92,10 @@
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <label for="valor">Valor:</label>
-        <input type="text" name="valor" required>
+        <input type="text" name="valor" required size="50" required style="width: 300px">
         <br>
         <label for="fromUnit">De:</label>
+        <input type="text" name="de" required size="50" required style="width: 300px">
         <select name="fromUnit">
             <option value="celsius">Celsius</option>
             <option value="fahrenheit">Fahrenheit</option>
@@ -105,6 +106,7 @@
         </select>
         <br>
         <label for="toUnit">Para:</label>
+        <input type="text" name="para" required size="50" required style="width: 300px">
         <select name="toUnit">
             <option value="celsius">Celsius</option>
             <option value="fahrenheit">Fahrenheit</option>
