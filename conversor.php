@@ -4,16 +4,20 @@
     <title>Conversor de Unidades</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: monospace;
             text-align: center;
             margin: 50px;
         }
         h1 {
+            font-family: monospace;
             color: #333;
+            font-size:100px;
         }
         #result {
+            font-family: monospace;
             font-weight: bold;
             margin-top: 20px;
+            font-size:50px;
         }
     </style>
 </head>
