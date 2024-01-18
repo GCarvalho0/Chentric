@@ -19,6 +19,11 @@
             margin-top: 20px;
             font-size:50px;
         }
+        button {
+            font-family: monospace;
+            padding: 30px 30px; /* Ajuste o tamanho conforme necessário */
+            font-size: 50px; /* Ajuste o tamanho da fonte conforme necessário */
+        }
     </style>
 </head>
 <body>
