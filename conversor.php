@@ -1,4 +1,21 @@
 <head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Unidades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 <h1>Conversor de Unidades</h1>
@@ -65,5 +82,36 @@
         }
 
         echo "<div id='result'>{$valor} {$fromUnit} é igual a {$convertedValue} {$toUnit}</div>";
+
     }
 ?>
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <label for="valor">Valor:</label>
+        <input type="text" name="valor" required>
+        <br>
+        <label for="fromUnit">De:</label>
+        <select name="fromUnit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kilometers">Quilômetros</option>
+            <option value="miles">Milhas</option>
+            <option value="kilograms">Quilogramas</option>
+            <option value="pounds">Libras</option>
+        </select>
+        <br>
+        <label for="toUnit">Para:</label>
+        <select name="toUnit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kilometers">Quilômetros</option>
+            <option value="miles">Milhas</option>
+            <option value="kilograms">Quilogramas</option>
+            <option value="pounds">Libras</option>
+        </select>
+        <br>
+        <button type="submit">Converter</button>
+    </form>
+
+</body>
+</html>
