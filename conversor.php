@@ -60,7 +60,7 @@
         return $pounds / 2.20462;
     }
 
-    // Processar o formulário quando enviado
+    // Processar o formulário quando enviado.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $valor = $_POST["valor"];
         $fromUnit = $_POST["fromUnit"];
