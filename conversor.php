@@ -39,3 +39,31 @@
         $valor = $_POST["valor"];
         $fromUnit = $_POST["fromUnit"];
         $toUnit = $_POST["toUnit"];
+
+        switch ($fromUnit) {
+            case "celsius":
+                $convertedValue = $toUnit == "fahrenheit" ? celsiusToFahrenheit($valor) : $valor;
+                break;
+            case "fahrenheit":
+                $convertedValue = $toUnit == "celsius" ? fahrenheitToCelsius($valor) : $valor;
+                break;
+            case "kilometers":
+                $convertedValue = $toUnit == "miles" ? kilometersToMiles($valor) : $valor;
+                break;
+            case "miles":
+                $convertedValue = $toUnit == "kilometers" ? milesToKilometers($valor) : $valor;
+                break;
+            case "kilograms":
+                $convertedValue = $toUnit == "pounds" ? kilogramsToPounds($valor) : $valor;
+                break;
+            case "pounds":
+                $convertedValue = $toUnit == "kilograms" ? poundsToKilograms($valor) : $valor;
+                break;
+            default:
+                $convertedValue = $valor;
+                break;
+        }
+
+        echo "<div id='result'>{$valor} {$fromUnit} é igual a {$convertedValue} {$toUnit}</div>";
+    }
+?>
